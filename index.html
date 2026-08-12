@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PRADHAN MUSIC</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ======================================
+         FLOATING BACKGROUND PARTICLES
+    ======================================= -->
+
+    <div class="particles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <!-- ======================================
+         ONLINE COUNTER
+    ======================================= -->
+
+    <div class="online">
+
+        <span class="online-dot"></span>
+
+        <span>30 online</span>
+
+    </div>
+
+
+    <!-- ======================================
+         MAIN CONTAINER
+    ======================================= -->
+
+    <main class="container">
+
+
+        <!-- ==================================
+             LOGO
+        =================================== -->
+
+        <div class="logo-container">
+
+            <div class="logo-top">
+                PRADHAN
+            </div>
+
+            <div class="logo-bottom">
+                MUSIC
+            </div>
+
+        </div>
+
+
+        <!-- ==================================
+             MUSIC CARD
+        =================================== -->
+
+        <section class="music-card">
+
+
+            <!-- ==============================
+                 ALBUM ART
+            =============================== -->
+
+            <div class="album">
+
+                <img
+                    id="albumImage"
+                    src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"
+                    alt="Song Artwork"
+                >
+
+            </div>
+
+
+            <!-- ==============================
+                 SONG INFORMATION
+            =============================== -->
+
+            <div class="song-info">
+
+                <h1>
+                    Mujhse Mohabbat Ka Izhaar Karta
+                </h1>
+
+                <p>
+                    Satrang Music Official
+                </p>
+
+            </div>
+
+
+            <!-- ==============================
+                 AUDIO ELEMENT
+            =============================== -->
+
+            <audio id="audio"></audio>
+
+
+            <!-- ==============================
+                 MUSIC PLAYER
+            =============================== -->
+
+            <div class="player">
+
+
+                <!-- PREVIOUS -->
+
+                <button
+                    id="previousButton"
+                    class="control-button"
+                    title="Previous"
+                >
+                    ⏮
+                </button>
+
+
+                <!-- PLAY / PAUSE -->
+
+                <button
+                    id="playButton"
+                    title="Play"
+                >
+                    ▶
+                </button>
+
+
+                <!-- NEXT -->
+
+                <button
+                    id="nextButton"
+                    class="control-button"
+                    title="Next"
+                >
+                    ⏭
+                </button>
+
+
+                <!-- CURRENT TIME -->
+
+                <span id="currentTime">
+                    0:00
+                </span>
+
+
+                <!-- PROGRESS -->
+
+                <div
+                    class="progress-container"
+                    id="progressContainer"
+                >
+
+                    <div
+                        class="progress"
+                        id="progress"
+                    ></div>
+
+                </div>
+
+
+                <!-- DURATION -->
+
+                <span id="duration">
+                    0:00
+                </span>
+
+
+                <!-- VOLUME BUTTON -->
+
+                <button
+                    id="volumeButton"
+                    title="Mute / Unmute"
+                >
+                    🔊
+                </button>
+
+
+                <!-- VOLUME -->
+
+                <input
+                    id="volume"
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                >
+
+            </div>
+
+
+            <!-- ==================================
+                 VISUALIZER
+            =================================== -->
+
+            <div
+                class="visualizer"
+                id="visualizer"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <!-- ==================================
+                 PLAYLIST
+            =================================== -->
+
+            <div class="playlist">
+
+                <h2>
+                    Playlist
+                </h2>
+
+
+                <!-- SONG 1 -->
+
+                <div
+                    class="playlist-item active"
+                    data-index="0"
+                >
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Mujhse Mohabbat Ka Izhaar Karta
+                        </strong>
+
+                        <small>
+                            Satrang Music Official
+                        </small>
+
+                    </div>
+
+                    <span>
+                        ▶
+                    </span>
+
+                </div>
+
+
+                <!-- SONG 2 -->
+
+                <div
+                    class="playlist-item"
+                    data-index="1"
+                >
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            SoundHelix Dream
+                        </strong>
+
+                        <small>
+                            Demo Artist
+                        </small>
+
+                    </div>
+
+                    <span>
+                        ▶
+                    </span>
+
+                </div>
+
+
+                <!-- SONG 3 -->
+
+                <div
+                    class="playlist-item"
+                    data-index="2"
+                >
+
+                    <span>
+                        03
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Night Music
+                        </strong>
+
+                        <small>
+                            Demo Artist
+                        </small>
+
+                    </div>
+
+                    <span>
+                        ▶
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <section class="spotify-section">
+    <h2>My Spotify Playlist</h2>
+
+    <iframe
+        src="https://open.spotify.com/embed/playlist/3rOwG4MdADyXZvbeaoSixH"
+        width="100%"
+        height="380"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+</section>
+
+
+    </main>
+
+
+    <!-- ======================================
+         JAVASCRIPT
+    ======================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
