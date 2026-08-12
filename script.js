@@ -69,46 +69,39 @@ const songs = [
 
     {
         title:
-            "SoundHelix Dream",
+            "295",
 
         artist:
-            "Demo Artist",
+            "Sidhu mose-wla",
 
         image:
             "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80",
 
         audio:
-            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+            "sidhu-moose-wala.mp3"
     },
 
 
     {
         title:
-            "Night Music",
+            "aawara angaarra",
 
         artist:
-            "Demo Artist",
+            "SAMOSA",
 
         image:
             "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80",
 
         audio:
-            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+            "aawara angarra.mp3"
     }
 
 ];
 
 
-// ========================================
-// CURRENT SONG
-// ========================================
-
 let currentSong = 0;
 
 
-// ========================================
-// LOAD SONG
-// ========================================
 
 function loadSong(index) {
 
@@ -595,8 +588,25 @@ document.addEventListener(
 );
 
 
-// ========================================
-// LOAD FIRST SONG
-// ========================================
 
 loadSong(0);
+
+
+function updateISTTime() {
+    const timeElement = document.getElementById("ist-time");
+
+    const now = new Date();
+
+    const indianTime = now.toLocaleTimeString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+       
+        hour12: true
+    });
+
+    timeElement.textContent = indianTime + " IST";
+}
+
+updateISTTime();
+setInterval(updateISTTime, 1000);

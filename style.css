@@ -1,6 +1,4 @@
-/* ========================================
-   RESET
-======================================== */
+
 
 * {
     margin: 0;
@@ -244,46 +242,7 @@ body::before {
 }
 
 
-/* ========================================
-   ONLINE COUNTER
-======================================== */
 
-.online {
-
-    position: fixed;
-
-    top: 18px;
-
-    left: 28px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    color: #aaa;
-
-    font-size: 14px;
-
-    z-index: 10;
-}
-
-
-.online-dot {
-
-    width: 7px;
-
-    height: 7px;
-
-    background: #00ff66;
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 12px
-        #00ff66;
-}
 
 
 /* ========================================
@@ -1253,4 +1212,13 @@ body::before {
 
     }
 
+}
+#ist-time {
+    position: fixed;
+    top: 20px;
+    left: 18px;
+    font-size: 13px;
+    color: #aaa;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
 }
